@@ -24,9 +24,7 @@ const moduleResolver = (name: string) => {
 
 const getValidatorModule: GetValidatorModuleSpec = async () => {
 
-  const selectedValidator: string = moduleResolver(SchemaValidators.JAVAC)
-    || moduleResolver(SchemaValidators.LIBXML)
-    || moduleResolver(SchemaValidators.XMLLINT) || '';
+  const selectedValidator: string = SchemaValidators.XMLLINT;
 
   const xsd = 'saml-schema-protocol-2.0.xsd';
 

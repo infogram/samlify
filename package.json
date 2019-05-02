@@ -12,16 +12,13 @@
   ],
   "typings": "types/index.d.ts",
   "scripts": {
-    "build": "make rebuild",
     "docs": "docsify serve -o docs",
     "lint": "tslint -p .",
     "lint:fix": "tslint -p . --fix",
     "pretest": "make pretest",
     "test": "npm run build && NODE_ENV=test nyc ava --verbose build/test",
     "test:pure": "NODE_ENV=test nyc ava --verbose build/test",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "preinstall": "make validator",
-    "hooks:postinstall": "ln -sf $PWD/.pre-commit.sh $PWD/.git/hooks/pre-commit"
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "contributors": [
     "Tony Ngan <tonynwk919@gmail.com>"
@@ -41,12 +38,11 @@
     "xml": "^1.0.0",
     "xml-crypto": "^1.1.4",
     "xmldom": "^0.1.19",
-    "xpath": "^0.0.27"
+    "xpath": "^0.0.27",
+    "node-xmllint": "^1.0.0"
   },
   "optionalDependencies": {
-    "@authenio/xml-encryption": "^0.11.2",
-    "libxml-xsd": "^0.5.2",
-    "node-xmllint": "^1.0.0"
+    "@authenio/xml-encryption": "^0.11.2"
   },
   "devDependencies": {
     "@types/camelcase": "^5.2.0",
